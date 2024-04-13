@@ -1,13 +1,13 @@
 import { forwardRef, ReactNode, Ref } from 'react';
 
+import { sayHello } from '@ccreusat-monorepo/client';
+
 export type ButtonRef = HTMLButtonElement;
 
 export type ButtonTypes = 'button' | 'submit' | 'reset';
 export type ButtonColors = 'primary' | 'secondary' | 'tertiary' | 'danger';
 export type ButtonVariants = 'filled' | 'outline' | 'ghost';
 export type ButtonSizes = 'sm' | 'md' | 'lg';
-
-import { sayHello} from '@ccreusat-monorepo/client'
 
 export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
   /**
@@ -30,7 +30,6 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    * Does it has a text ?
    */
   children?: ReactNode;
-  
 }
 
 /**
@@ -49,7 +48,6 @@ export const Button = forwardRef(
     }: ButtonProps,
     ref: Ref<ButtonRef>
   ) => {
-
     return (
       <button ref={ref} type={type} {...restProps}>
         {sayHello()}
