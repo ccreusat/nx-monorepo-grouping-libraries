@@ -10,24 +10,15 @@
     "importHelpers": true,
     "target": "ES2021",
     "module": "esnext",
-    "lib": [
-      "ES2021",
-      "dom"
-    ],
+    "lib": ["ES2021", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ccreusat-monorepo/client": [
-        "libs/client/src/index.ts"
-      ],
-      "@ccreusat-monorepo/ui-library": [
-        "libs/react/ui-library/src/index.ts"
-      ]
+      "@ccreusat-monorepo/client": ["libs/client/src/index.ts"],
+      "@ccreusat-monorepo/transformer": ["libs/react/transformer/src/index.ts"],
+      "@ccreusat-monorepo/ui-library": ["libs/react/ui-library/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
