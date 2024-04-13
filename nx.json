@@ -167,7 +167,7 @@
     ],
     "version": {
       "preVersionCommand": "pnpm nx run-many -t build",
-      "conventionalCommits": true
+      "conventionalCommits": false
     },
     "changelog": {
       "workspaceChangelog": {
