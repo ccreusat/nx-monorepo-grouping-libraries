@@ -162,7 +162,8 @@
   },
   "release": {
     "projects": [
-      "libs/*"
+      "libs/*",
+      "libs/**"
     ],
     "version": {
       "preVersionCommand": "pnpm nx run-many -t build",

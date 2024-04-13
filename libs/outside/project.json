@@ -1,0 +1,48 @@
+{
+  "name": "outside",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/outside/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/outside",
+        "main": "libs/outside/src/index.ts",
+        "tsConfig": "libs/outside/tsconfig.lib.json",
+        "assets": [
+          "libs/outside/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/outside/**/*.{ts,tsx,js,jsx}",
+          "libs/outside/package.json"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/{projectName}"
+      }
+    }
+  },
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/libs/{projectName}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  }
+}
